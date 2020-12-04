@@ -1,2 +1,2 @@
-# zhusuan-mnist-vae
- VAE implementation in ZhuSuan for the MNIST dataset
+# zhusuan-mnist
+ Implementation of VAE using ZhuSuan on the MNIST dataset
