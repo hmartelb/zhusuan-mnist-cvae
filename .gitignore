@@ -124,3 +124,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 data/mnist.pkl.gz
+venv.bat
