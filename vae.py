@@ -66,7 +66,7 @@ def train_vae(args):
             
             lbs = []
             for t in range(n_iter):
-                dataset.show_progress(t, 1, n_iter)
+                dataset.show_progress(t+1, 1, n_iter)
                 x_batch = x_train[t * args.batch_size:(t + 1) * args.batch_size]
                 _, lb = sess.run([infer_op, lower_bound],
                     feed_dict={
@@ -77,7 +77,7 @@ def train_vae(args):
                 lbs.append(lb)
  
             time_epoch += time.time()
-            print("Epoch {} ({:.1f}s): Lower bound = {}".format(epoch, time_epoch, np.mean(lbs)))
+            print("\nEpoch {} ({:.1f}s): Lower bound = {}".format(epoch, time_epoch, np.mean(lbs)))
 
             if(epoch % save_model_freq == 0):
                 print('Saving model...')
