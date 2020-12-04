@@ -15,7 +15,10 @@ import utils
 def train_vae(args):
     # Load MNIST dataset
     data_path = os.path.join(args.data_dir, "mnist.pkl.gz")
-    x_train, t_train, x_valid, t_valid, x_test, t_test = dataset.load_mnist_realval(data_path)
+
+    load_fn = dataset.load_binary_mnist_realval if('binary' in args.checkpoints_path) else dataset.load_mnist_realval
+    x_train, t_train, x_valid, t_valid, x_test, t_test = load_fn(data_path)
+    
     x_train = np.vstack([x_train, x_valid])
     x_test = np.random.binomial(1, x_test, size=x_test.shape)
     n_iter = x_train.shape[0] // args.batch_size
@@ -91,7 +94,7 @@ def train_vae(args):
  
         x_gen = tf.reshape(gen_model.observe()["x_mean"], [-1, 28, 28, 1])
         images = sess.run(x_gen, feed_dict={n: 100, n_particles: 1})
-        name = os.path.join(args.result_path, "random_samples.png")
+        name = os.path.join(args.results_path, "random_samples.png")
         utils.save_image_collections(images, name)
  
         test_n = [3, 2, 1, 90, 95, 23, 11, 0, 84, 7]
@@ -105,7 +108,7 @@ def train_vae(args):
             })
             x_gen = tf.reshape(gen_model.observe(z=latent)["x_mean"], [-1, 28, 28, 1])
             images = sess.run(x_gen, feed_dict={})
-            name = os.path.join(args.result_path, "{}.png".format(i))
+            name = os.path.join(args.results_path, "{}.png".format(i))
             utils.save_image_collections(images, name)
  
 
@@ -125,7 +128,7 @@ if __name__ == "__main__":
     
     # Paths
     parser.add_argument('--data_dir', default=os.path.join('data'))
-    parser.add_argument('--result_path', default=os.path.join('results'))
+    parser.add_argument('--results_path', default=os.path.join('results'))
     parser.add_argument('--checkpoints_path', default=os.path.join('checkpoints'))
     
     args = parser.parse_args()
