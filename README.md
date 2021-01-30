@@ -1,6 +1,5 @@
 # CVAE implementation in ZhuSuan
-This repository contains an implementation of a Class-conditioned VAE (CVAE) using [ZhuSuan](https://github.com/thu-ml/zhusuan) on the MNIST dataset.
-This is a coding assignment from the Machine Learning course at Tsinghua University, Fall Semester 2020.  
+This repository contains an implementation of a Class-conditioned VAE (CVAE) using [ZhuSuan](https://github.com/thu-ml/zhusuan) on the MNIST dataset. The code was developed for the Machine Learning course at Tsinghua University, Fall Semester 2020.  
 
 # Installation
 Clone the repository and install the requirements in your machine by running:
