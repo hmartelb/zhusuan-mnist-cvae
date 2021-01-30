@@ -5,6 +5,8 @@ This repository contains an implementation of a Class-conditioned VAE (CVAE) usi
 Clone the repository and install the requirements in your machine by running:
 ```
 (venv) pip install -r requirements.txt
+(venv) cd zhusuan-master
+(venv) pip install .
 ```
 Note: It is recommended to use a virtual environment to install all the dependencies.
 
