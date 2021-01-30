@@ -10,7 +10,7 @@ Clone the repository and install the requirements in your machine by running:
 Note: It is recommended to use a virtual environment to install all the dependencies.
 
 # Quick start
-You can train a model by running the following command and changing the arguments accordingly. `Arguments in square brackets are optional`.
+You can train a model by running the following command and changing the arguments accordingly. `Arguments in square brackets are optional (all arguments)`.
 ```
 (venv) python3 cvae.py [--gpu <DEVICE_ID>]
 
@@ -29,17 +29,6 @@ You can train a model by running the following command and changing the argument
 
 # Results
 A model trained after 100 epochs with learning rate of 0.001 can generate images like these:
-
-
-
-
-
-
-
-
-
- 
-
 
 | 0 | 1 | 2 | 3 | 4 | 
 | :---:        | :---:    | :---:         | :---:        | :------: | 
