@@ -33,5 +33,4 @@ termcolor==1.1.0
 tifffile==2020.9.3
 Werkzeug==1.0.1
 wrapt==1.12.1
-zhusuan @ file:///C:/Users/hector/Documents/GitHub/zhusuan-mnist/zhusuan-master
 zipp==3.4.0
