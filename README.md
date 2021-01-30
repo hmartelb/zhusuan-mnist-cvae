@@ -30,16 +30,22 @@ You can train a model by running the following command and changing the argument
 # Results
 A model trained after 100 epochs with learning rate of 0.001 can generate images like these:
 
-<img src="results/100/0.png" width="150" height="150"> 
-<img src="results/100/1.png" width="150" height="150"> 
-<img src="results/100/2.png" width="150" height="150"> 
-<img src="results/100/3.png" width="150" height="150"> 
-<img src="results/100/4.png" width="150" height="150"> 
-<img src="results/100/5.png" width="150" height="150"> 
-<img src="results/100/6.png" width="150" height="150"> 
-<img src="results/100/7.png" width="150" height="150"> 
-<img src="results/100/8.png" width="150" height="150"> 
-<img src="results/100/9.png" width="150" height="150"> 
+
+
+
+
+
+
+
+
+ 
+
+
+| 0 | 1 | 2 | 3 | 4 | 
+| :---:        | :---:    | :---:         | :---:        | :------: | 
+| <img src="results/100/0.png"> | <img src="results/100/1.png">    | <img src="results/100/2.png">        | <img src="results/100/3.png">        | <img src="results/100/4.png">    | 
+| 5 | 6 | 7 | 8 | 9 | 
+| <img src="results/100/5.png">        | <img src="results/100/6.png">   | <img src="results/100/7.png">        | <img src="results/100/8.png">      |<img src="results/100/9.png">   | 
 
 # License
 ```
